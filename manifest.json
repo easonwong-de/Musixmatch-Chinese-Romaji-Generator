@@ -1,0 +1,23 @@
+{
+	"name": "Musixmatch Chinese Romaji Generator",
+	"version": "0.0.1",
+	"description": "",
+	"author": "Eason Wong",
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "MCRG@EasonWong"
+		}
+	},
+	"permissions": ["activeTab"],
+	"background": {
+		"scripts": ["background.js"],
+		"persistent": false
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://curators.musixmatch.com/*"],
+			"js": ["content_script.js"]
+		}
+	],
+	"manifest_version": 2
+}
